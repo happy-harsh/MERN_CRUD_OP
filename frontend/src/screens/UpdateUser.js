@@ -26,7 +26,7 @@ const UpdateUser = () => {
       email:input.email
     };
 
-    axios.put(`http://localhost:3001/api/updateUser/${id}`,userData).then((res)=>{
+    axios.put(`https://mernbyharsh.onrender.com/api/updateUser/${id}`,userData).then((res)=>{
         console.log(res.data)        
     }).catch((error)=>{
         console.log(error);

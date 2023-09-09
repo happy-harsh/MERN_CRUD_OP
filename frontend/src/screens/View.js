@@ -11,7 +11,7 @@ const View = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/getUser")
+      .get("https://mernbyharsh.onrender.com/api/getUser")
       .then((res) => {
         const ans = res.data;
         setGetData(ans);
@@ -22,7 +22,7 @@ const View = () => {
   }, [getData]);
 
   const deleteUser = async (id)=>{
-    await axios.delete(`http://localhost:3001/api/deleteUser/${id}`).then(()=>{
+    await axios.delete(`hhttps://mernbyharsh.onrender.com/api/deleteUser/${id}`).then(()=>{
       alert("User deleted successfully")
       setGetData(getData.filter((data)=>data._id !==data.id));
     }).catch((error)=>{

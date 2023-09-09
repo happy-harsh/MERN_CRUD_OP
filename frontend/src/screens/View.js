@@ -22,7 +22,7 @@ const View = () => {
   }, [getData]);
 
   const deleteUser = async (id)=>{
-    await axios.delete(`hhttps://mernbyharsh.onrender.com/api/deleteUser/${id}`).then(()=>{
+    await axios.delete(`https://mernbyharsh.onrender.com/api/deleteUser/${id}`).then(()=>{
       alert("User deleted successfully")
       setGetData(getData.filter((data)=>data._id !==data.id));
     }).catch((error)=>{
